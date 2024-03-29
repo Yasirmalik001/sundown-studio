@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .lists {
+        list-style-type: none;
+        --index: 0; /* Declare --index variable here */
+      }
+      .lists li {
+        opacity: 0;
+        transform: translateY(-0.25rem); /* Corrected property */
+      }
+      .lists.active li {
+        opacity: 1;
+        transform: translateY(0rem); /* Corrected property */
+      }
+      .lists li {
+        transition-duration: 200ms;
+        transition-delay: calc(var(--index) * 100ms);
+        transition-property: opacity, transform; /* Corrected property */
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="lists">
+      <li>yasir</li>
+      <li>malik</li>
+      <li>web</li>
+      <li>developer</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollable Text</title>
+    <style>
+      .scroll-anime {
+        white-space: nowrap;
+        background-color: yellow;
+        /* font-size: 2em; */
+      }
+
+      h1 {
+        display: inline-block;
+        font-size: 2em;
+        animation: scroll-anime 20s linear infinite;
+        transition: transform 0.5s ease;
+      }
+
+      @keyframes scroll-anime {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .scroll-anime:hover h1 {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-anime">
+      <h1>This is dynamic scrollable text with transform and transition effects. Hover to pause.</h1>
+    </div>
+  </body>
+</html>
